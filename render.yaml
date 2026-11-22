@@ -1,0 +1,30 @@
+# Render Blueprint for the backend (optional: you can also create the service by hand)
+services:
+  - type: web
+    name: ticketflow-api
+    runtime: node
+    rootDir: server
+    plan: free
+    buildCommand: npm ci
+    startCommand: npm start
+    healthCheckPath: /api/health
+    autoDeploy: false # deploys are triggered by GitHub Actions after CI passes
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: MONGODB_URI
+        sync: false
+      - key: DB_NAME
+        value: CPS_Pro
+      - key: COLLECTION_PREFIX
+        value: TicketFlow
+      - key: JWT_SECRET
+        generateValue: true
+      - key: CLIENT_URL
+        sync: false
+      - key: CLOUDINARY_URL
+        sync: false
+      - key: CLOUDINARY_FOLDER
+        value: CPS_Project
+      - key: HOLD_MINUTES
+        value: 5
