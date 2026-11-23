@@ -7,9 +7,9 @@ Organizers build seat maps with priced categories. Customers browse, **hold seat
 
 | | URL |
 |---|---|
-| Frontend (Vercel) | `https://<your-app>.vercel.app` |
-| Backend API (Render) | `https://<your-api>.onrender.com/api` |
-| Health check | `https://<your-api>.onrender.com/api/health` |
+| Frontend (Vercel) | `https://ticketflow-pi-beige.vercel.app` |
+| Backend API (Render) | `https://ticketflow-vn61.onrender.com/api` |
+| Health check | `https://ticketflow-vn61.onrender.com/api/health` |
 
 ### Demo credentials
 
